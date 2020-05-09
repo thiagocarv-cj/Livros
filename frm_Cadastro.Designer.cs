@@ -48,7 +48,7 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
-			this.button6 = new System.Windows.Forms.Button();
+			this.btn_Sair_ini = new System.Windows.Forms.Button();
 			this.gpb_Categoria.SuspendLayout();
 			this.gpb_Geral.SuspendLayout();
 			this.gpb_Inicio.SuspendLayout();
@@ -95,7 +95,7 @@
 			// 
 			// gpb_Inicio
 			// 
-			this.gpb_Inicio.Controls.Add(this.button6);
+			this.gpb_Inicio.Controls.Add(this.btn_Sair_ini);
 			this.gpb_Inicio.Controls.Add(this.button5);
 			this.gpb_Inicio.Controls.Add(this.button4);
 			this.gpb_Inicio.Controls.Add(this.button1);
@@ -232,7 +232,7 @@
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(102, 23);
 			this.button4.TabIndex = 1;
-			this.button4.Text = "Lista de Filmes";
+			this.button4.Text = "Lista de Livros";
 			this.button4.UseVisualStyleBackColor = true;
 			// 
 			// button5
@@ -244,14 +244,15 @@
 			this.button5.Text = "Imprimir";
 			this.button5.UseVisualStyleBackColor = true;
 			// 
-			// button6
+			// btn_Sair_ini
 			// 
-			this.button6.Location = new System.Drawing.Point(516, 32);
-			this.button6.Name = "button6";
-			this.button6.Size = new System.Drawing.Size(102, 23);
-			this.button6.TabIndex = 3;
-			this.button6.Text = "Imprimir";
-			this.button6.UseVisualStyleBackColor = true;
+			this.btn_Sair_ini.Location = new System.Drawing.Point(516, 32);
+			this.btn_Sair_ini.Name = "btn_Sair_ini";
+			this.btn_Sair_ini.Size = new System.Drawing.Size(102, 23);
+			this.btn_Sair_ini.TabIndex = 3;
+			this.btn_Sair_ini.Text = "Sair";
+			this.btn_Sair_ini.UseVisualStyleBackColor = true;
+			this.btn_Sair_ini.Click += new System.EventHandler(this.btn_Sair_ini_Click);
 			// 
 			// frm_Cadastro
 			// 
@@ -291,7 +292,7 @@
 		private System.Windows.Forms.Button btn_Salvar;
 		private System.Windows.Forms.TextBox textBox2;
 		private System.Windows.Forms.GroupBox gpb_Inicio;
-		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.Button btn_Sair_ini;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button button4;
 		private System.Windows.Forms.Button button1;

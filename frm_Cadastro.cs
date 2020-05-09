@@ -21,5 +21,11 @@ namespace Livros
 		{
 			this.Close();
 		}
+
+		private void btn_Sair_ini_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("entrou errado né!!");
+			this.Close();
+		}
 	}
 }

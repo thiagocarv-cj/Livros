@@ -1,0 +1,11 @@
+C:\Users\Maria\source\repos\Livros\bin\Debug\Livros.exe.config
+C:\Users\Maria\source\repos\Livros\bin\Debug\Livros.exe
+C:\Users\Maria\source\repos\Livros\bin\Debug\Livros.pdb
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.frm_Cadastro.resources
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.frm_Principal.resources
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.Properties.Resources.resources
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.csproj.GenerateResource.cache
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.csproj.CoreCompileInputs.cache
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.exe
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.pdb
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.csprojAssemblyReference.cache
