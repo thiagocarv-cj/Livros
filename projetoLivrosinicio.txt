@@ -1,0 +1,11 @@
+---Projeto Livros
+---API desenvolvido em C#
+---Destinado ao controle de Livros
+---Bibiloteca de um Hotel em Campos do Jordão/SP
+---Observação :
+
+  -> Sistema simples, mas funcional, atende ao que o cliente pediu,
+
+--- Desenvolvedor : Thiago José de Carvalho
+  
+  - 09 de maio de 2020.
