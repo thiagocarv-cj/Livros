@@ -47,10 +47,12 @@ x64/
 *.pidb
 *.log
 *.scc
+*.vs
 
 # OS generated files #
 .DS_Store*
 Icon?
+.vs
 
 # Visual C++ cache files
 ipch/
