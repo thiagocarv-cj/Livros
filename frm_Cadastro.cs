@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,28 @@ namespace Livros
 			InitializeComponent();
 		}
 
+		public void passaValoresParaCombobox()
+		{
+			
+			ConexaoBanco Categoria = new ConexaoBanco();
+			cb_Categoria.DataSource = Categoria.prcombo_Categoria();
+			cb_Categoria.DisplayMember = "Nome";
+			cb_Categoria.Text = "N/C";
+		}
+
+		public void preenche()
+		{
+			ConexaoBanco passa = new ConexaoBanco();
+			ArrayList lista = new ArrayList();
+
+			lista.Add(txt_Nome.Text);
+			lista.Add(txt_Ano.Text);
+			lista.Add(txt_Editora.Text);
+			lista.Add(rtxt_Resumo.Text);
+			lista.Add(cb_Categoria.Text);
+
+		}
+
 		private void btn_Sair_Click(object sender, EventArgs e)
 		{
 			this.Close();
@@ -26,6 +49,11 @@ namespace Livros
 		{
 			MessageBox.Show("entrou errado né!!");
 			this.Close();
+		}
+
+		private void frm_Cadastro_Load(object sender, EventArgs e)
+		{
+			passaValoresParaCombobox();
 		}
 	}
 }
