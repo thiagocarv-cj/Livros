@@ -53,7 +53,19 @@ namespace Livros
 
 		private void frm_Cadastro_Load(object sender, EventArgs e)
 		{
+			
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
 			passaValoresParaCombobox();
+			gpb_Categoria.Visible = true;
+
+		}
+
+		private void btn_Proximo_Click(object sender, EventArgs e)
+		{
+			gpb_Geral.Visible = true;
 		}
 	}
 }

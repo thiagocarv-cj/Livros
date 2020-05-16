@@ -53,6 +53,12 @@
     <Compile Include="frm_Cadastro.Designer.cs">
       <DependentUpon>frm_Cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Cadastro_ de_ Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Cadastro_ de_ Categorias.Designer.cs">
+      <DependentUpon>frm_Cadastro_ de_ Categorias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_Cadastro.resx">
       <DependentUpon>frm_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Cadastro_ de_ Categorias.resx">
+      <DependentUpon>frm_Cadastro_ de_ Categorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Principal.resx">
       <DependentUpon>frm_Principal.cs</DependentUpon>

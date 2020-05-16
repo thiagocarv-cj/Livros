@@ -134,5 +134,35 @@ namespace Livros
 		}
 
 		#endregion
+
+		public bool CadastrarCategorias(string p_CadCategoria)
+		{
+			SqlCommand cadastrarcategorias = null;
+			if (this.Abrirconexao())
+			{
+				try
+				{
+					cadastrarcategorias = new SqlCommand("Insert Into Categoria (nome) values (@N)", cnx);
+					cadastrarcategorias.Parameters.Add(new SqlParameter("@N", p_CadCategoria));
+					
+					cadastrarcategorias.ExecuteNonQuery();
+					MessageBox.Show("Cadastro efetuado!");
+
+					return true;
+				}
+				catch (Exception ex)
+				{
+					throw new Exception(ex.Message);
+				}
+				finally
+				{
+					this.Fecharconexao();
+				}
+			}
+			else
+			{
+				return false;
+			}
+		}
 	}
 }

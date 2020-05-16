@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,22 +11,31 @@ using System.Windows.Forms;
 
 namespace Livros
 {
-	public partial class frm_Principal : Form
+	public partial class frm_Cadastro__de__Categorias : Form
 	{
-		public frm_Principal()
+		public frm_Cadastro__de__Categorias()
 		{
 			InitializeComponent();
 		}
 
-		private void btn_Cadastro_Click(object sender, EventArgs e)
+		ConexaoBanco passa = new ConexaoBanco();
+
+		public void grava()
 		{
 			
+			string lista;
+
+			lista = txt_Categoria.Text;
+
+			passa.CadastrarCategorias(lista);
+
+
 		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			frm_Cadastro__de__Categorias frm = new frm_Cadastro__de__Categorias();
-			frm.Show();
+			grava();
+			
 		}
 	}
 }

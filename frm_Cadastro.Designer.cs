@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.gpb_Categoria = new System.Windows.Forms.GroupBox();
+			this.cb_Categoria = new System.Windows.Forms.ComboBox();
 			this.btn_Proximo = new System.Windows.Forms.Button();
 			this.gpb_Geral = new System.Windows.Forms.GroupBox();
 			this.btn_Sair = new System.Windows.Forms.Button();
@@ -47,8 +48,7 @@
 			this.btn_Sair_ini = new System.Windows.Forms.Button();
 			this.button5 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
-			this.button1 = new System.Windows.Forms.Button();
-			this.cb_Categoria = new System.Windows.Forms.ComboBox();
+			this.btn_Novo = new System.Windows.Forms.Button();
 			this.gpb_Categoria.SuspendLayout();
 			this.gpb_Geral.SuspendLayout();
 			this.gpb_Inicio.SuspendLayout();
@@ -64,6 +64,15 @@
 			this.gpb_Categoria.TabIndex = 0;
 			this.gpb_Categoria.TabStop = false;
 			this.gpb_Categoria.Text = "Categoria";
+			this.gpb_Categoria.Visible = false;
+			// 
+			// cb_Categoria
+			// 
+			this.cb_Categoria.FormattingEnabled = true;
+			this.cb_Categoria.Location = new System.Drawing.Point(37, 32);
+			this.cb_Categoria.Name = "cb_Categoria";
+			this.cb_Categoria.Size = new System.Drawing.Size(236, 21);
+			this.cb_Categoria.TabIndex = 3;
 			// 
 			// btn_Proximo
 			// 
@@ -73,6 +82,7 @@
 			this.btn_Proximo.TabIndex = 2;
 			this.btn_Proximo.Text = "Próximo";
 			this.btn_Proximo.UseVisualStyleBackColor = true;
+			this.btn_Proximo.Click += new System.EventHandler(this.btn_Proximo_Click);
 			// 
 			// gpb_Geral
 			// 
@@ -94,6 +104,7 @@
 			this.gpb_Geral.TabIndex = 1;
 			this.gpb_Geral.TabStop = false;
 			this.gpb_Geral.Text = "Geral";
+			this.gpb_Geral.Visible = false;
 			// 
 			// btn_Sair
 			// 
@@ -202,7 +213,7 @@
 			this.gpb_Inicio.Controls.Add(this.btn_Sair_ini);
 			this.gpb_Inicio.Controls.Add(this.button5);
 			this.gpb_Inicio.Controls.Add(this.button4);
-			this.gpb_Inicio.Controls.Add(this.button1);
+			this.gpb_Inicio.Controls.Add(this.btn_Novo);
 			this.gpb_Inicio.Location = new System.Drawing.Point(12, 12);
 			this.gpb_Inicio.Name = "gpb_Inicio";
 			this.gpb_Inicio.Size = new System.Drawing.Size(776, 79);
@@ -238,22 +249,15 @@
 			this.button4.Text = "Lista de Livros";
 			this.button4.UseVisualStyleBackColor = true;
 			// 
-			// button1
+			// btn_Novo
 			// 
-			this.button1.Location = new System.Drawing.Point(124, 32);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "Novo";
-			this.button1.UseVisualStyleBackColor = true;
-			// 
-			// cb_Categoria
-			// 
-			this.cb_Categoria.FormattingEnabled = true;
-			this.cb_Categoria.Location = new System.Drawing.Point(37, 32);
-			this.cb_Categoria.Name = "cb_Categoria";
-			this.cb_Categoria.Size = new System.Drawing.Size(236, 21);
-			this.cb_Categoria.TabIndex = 3;
+			this.btn_Novo.Location = new System.Drawing.Point(124, 32);
+			this.btn_Novo.Name = "btn_Novo";
+			this.btn_Novo.Size = new System.Drawing.Size(75, 23);
+			this.btn_Novo.TabIndex = 0;
+			this.btn_Novo.Text = "Novo";
+			this.btn_Novo.UseVisualStyleBackColor = true;
+			this.btn_Novo.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// frm_Cadastro
 			// 
@@ -295,7 +299,7 @@
 		private System.Windows.Forms.Button btn_Sair_ini;
 		private System.Windows.Forms.Button button5;
 		private System.Windows.Forms.Button button4;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btn_Novo;
 		private System.Windows.Forms.ComboBox cb_Categoria;
 	}
 }
