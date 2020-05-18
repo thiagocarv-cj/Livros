@@ -18,7 +18,7 @@ namespace Livros
 		private string pegasql = "";
 		SqlConnection cnx = null;
 
-		
+
 
 		#region Métodos de conexão
 
@@ -70,13 +70,13 @@ namespace Livros
 				try
 				{
 					cadastrarlivros = new SqlCommand("INSERT INTO " +
-						"Cadastro (id , nome , ano, editora, resumo)"+
+						"Cadastro (id , nome , ano, editora, resumo)" +
    "					 VALUES (@id , @nome, @ano , @editora)", cnx);
 					cadastrarlivros.Parameters.Add(new SqlParameter("@id", p_cadDiscos[0]));
 					cadastrarlivros.Parameters.Add(new SqlParameter("@nome", p_cadDiscos[1]));
 					cadastrarlivros.Parameters.Add(new SqlParameter("@ano", p_cadDiscos[2]));
 					cadastrarlivros.Parameters.Add(new SqlParameter("@editora", p_cadDiscos[3]));
-					
+
 					cadastrarlivros.ExecuteNonQuery();
 					return true;
 				}
@@ -135,6 +135,45 @@ namespace Livros
 
 		#endregion
 
+		#region
+		public DataTable PreencheGridCategorias()
+		{
+			SqlCommand pegaCategorias = null;
+
+			if (this.Abrirconexao())
+			{
+				string sql = "select id, nome As [Categoria] from Categoria";
+				try
+				{
+					pegaCategorias = new SqlCommand(sql, cnx);
+					SqlDataAdapter adp = new SqlDataAdapter(pegaCategorias);
+					DataTable dt = new DataTable();
+					adp.Fill(dt);
+					//pegaCategorias.ExecuteNonQuery();
+					return dt;
+
+
+				}
+				catch (Exception ex)
+				{
+					throw new Exception(ex.Message);
+				}
+				finally
+				{
+					this.Fecharconexao();
+				}
+			}
+			else
+			{
+				return null;
+			}
+		}
+
+		#endregion
+
+		#region comandos insert
+
+
 		public bool CadastrarCategorias(string p_CadCategoria)
 		{
 			SqlCommand cadastrarcategorias = null;
@@ -144,7 +183,7 @@ namespace Livros
 				{
 					cadastrarcategorias = new SqlCommand("Insert Into Categoria (nome) values (@N)", cnx);
 					cadastrarcategorias.Parameters.Add(new SqlParameter("@N", p_CadCategoria));
-					
+
 					cadastrarcategorias.ExecuteNonQuery();
 					MessageBox.Show("Cadastro efetuado!");
 
@@ -164,5 +203,41 @@ namespace Livros
 				return false;
 			}
 		}
+
+		#endregion
+
+		#region comandos delete
+
+		public bool DeletarCategorias(int p_ExcluiCategoria)
+		{
+			SqlCommand excluircategorias = null;
+			if (this.Abrirconexao())
+			{
+				try
+				{
+					excluircategorias = new SqlCommand("Delete from Categoria where id = (@i)", cnx);
+					excluircategorias.Parameters.Add(new SqlParameter("@i", p_ExcluiCategoria));
+
+					excluircategorias.ExecuteNonQuery();
+					
+					return true;
+				}
+				catch (Exception ex)
+				{
+					throw new Exception(ex.Message);
+				}
+				finally
+				{
+					this.Fecharconexao();
+				}
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+
+		#endregion
 	}
 }

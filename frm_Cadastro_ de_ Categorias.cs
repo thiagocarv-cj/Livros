@@ -19,6 +19,7 @@ namespace Livros
 		}
 
 		ConexaoBanco passa = new ConexaoBanco();
+		int id;
 
 		public void grava()
 		{
@@ -32,10 +33,44 @@ namespace Livros
 
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void btn_Alterar_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btn_Cadastrar_Click(object sender, EventArgs e)
 		{
 			grava();
-			
+		}
+
+		public void pega_cell()
+		{
+			// vamos obter a linha da célula selecionada
+			DataGridViewRow linhaAtual = dgv_Categorias.CurrentRow;
+
+			// vamos exibir o índice da linha atual
+			int indice = linhaAtual.Index;
+			id = int.Parse(dgv_Categorias.Rows[indice].Cells[0].Value.ToString());
+
+		}
+
+		private void btn_Excluir_Click(object sender, EventArgs e)
+		{
+			pega_cell();
+			passa.DeletarCategorias(id);		
+			if(passa.DeletarCategorias(1))
+			{
+				MessageBox.Show("Excluido com Sucesso");
+			}
+		}
+
+				
+
+		private void frm_Cadastro__de__Categorias_Load(object sender, EventArgs e)
+		{
+			dgv_Categorias.DataSource = passa.PreencheGridCategorias();
+			dgv_Categorias.Columns[0].Visible = false;
+			dgv_Categorias.Columns[1].Width = 423;
 		}
 	}
 }

@@ -32,10 +32,10 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.btn_Excluir = new System.Windows.Forms.Button();
 			this.btn_Pesquisar = new System.Windows.Forms.Button();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.button3 = new System.Windows.Forms.Button();
+			this.dgv_Categorias = new System.Windows.Forms.DataGridView();
+			this.btn_Cadastrar = new System.Windows.Forms.Button();
 			this.btn_Alterar = new System.Windows.Forms.Button();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dgv_Categorias)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txt_Categoria
@@ -62,7 +62,7 @@
 			this.btn_Excluir.TabIndex = 2;
 			this.btn_Excluir.Text = "Excluir";
 			this.btn_Excluir.UseVisualStyleBackColor = true;
-			this.btn_Excluir.Click += new System.EventHandler(this.button1_Click);
+			this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
 			// 
 			// btn_Pesquisar
 			// 
@@ -73,22 +73,24 @@
 			this.btn_Pesquisar.Text = "Pesquisar";
 			this.btn_Pesquisar.UseVisualStyleBackColor = true;
 			// 
-			// dataGridView1
+			// dgv_Categorias
 			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(87, 128);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(426, 150);
-			this.dataGridView1.TabIndex = 4;
+			this.dgv_Categorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgv_Categorias.Location = new System.Drawing.Point(87, 128);
+			this.dgv_Categorias.Name = "dgv_Categorias";
+			this.dgv_Categorias.RowHeadersVisible = false;
+			this.dgv_Categorias.Size = new System.Drawing.Size(426, 150);
+			this.dgv_Categorias.TabIndex = 4;
 			// 
-			// button3
+			// btn_Cadastrar
 			// 
-			this.button3.Location = new System.Drawing.Point(159, 92);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(75, 20);
-			this.button3.TabIndex = 5;
-			this.button3.Text = "Cadastrar";
-			this.button3.UseVisualStyleBackColor = true;
+			this.btn_Cadastrar.Location = new System.Drawing.Point(159, 92);
+			this.btn_Cadastrar.Name = "btn_Cadastrar";
+			this.btn_Cadastrar.Size = new System.Drawing.Size(75, 20);
+			this.btn_Cadastrar.TabIndex = 5;
+			this.btn_Cadastrar.Text = "Cadastrar";
+			this.btn_Cadastrar.UseVisualStyleBackColor = true;
+			this.btn_Cadastrar.Click += new System.EventHandler(this.btn_Cadastrar_Click);
 			// 
 			// btn_Alterar
 			// 
@@ -98,6 +100,7 @@
 			this.btn_Alterar.TabIndex = 6;
 			this.btn_Alterar.Text = "Alterar";
 			this.btn_Alterar.UseVisualStyleBackColor = true;
+			this.btn_Alterar.Click += new System.EventHandler(this.btn_Alterar_Click);
 			// 
 			// frm_Cadastro__de__Categorias
 			// 
@@ -105,15 +108,16 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(608, 318);
 			this.Controls.Add(this.btn_Alterar);
-			this.Controls.Add(this.button3);
-			this.Controls.Add(this.dataGridView1);
+			this.Controls.Add(this.btn_Cadastrar);
+			this.Controls.Add(this.dgv_Categorias);
 			this.Controls.Add(this.btn_Pesquisar);
 			this.Controls.Add(this.btn_Excluir);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.txt_Categoria);
 			this.Name = "frm_Cadastro__de__Categorias";
 			this.Text = "Cadastro de Categorias";
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.Load += new System.EventHandler(this.frm_Cadastro__de__Categorias_Load);
+			((System.ComponentModel.ISupportInitialize)(this.dgv_Categorias)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -125,8 +129,8 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btn_Excluir;
 		private System.Windows.Forms.Button btn_Pesquisar;
-		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.DataGridView dgv_Categorias;
+		private System.Windows.Forms.Button btn_Cadastrar;
 		private System.Windows.Forms.Button btn_Alterar;
 	}
 }
