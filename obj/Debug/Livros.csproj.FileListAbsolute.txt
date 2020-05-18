@@ -9,3 +9,4 @@ C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.csproj.CoreCompileInputs.cac
 C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.exe
 C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.pdb
 C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.csprojAssemblyReference.cache
+C:\Users\Maria\source\repos\Livros\obj\Debug\Livros.frm_Cadastro__de__Categorias.resources

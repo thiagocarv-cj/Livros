@@ -19,8 +19,13 @@ namespace Livros
 
 		private void btn_Cadastro_Click(object sender, EventArgs e)
 		{
-			frm_Cadastro frm = new frm_Cadastro();
-			frm.ShowDialog();
+			
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			frm_Cadastro__de__Categorias frm = new frm_Cadastro__de__Categorias();
+			frm.Show();
 		}
 	}
 }

@@ -31,11 +31,12 @@
 			this.btn_Cadastro = new System.Windows.Forms.Button();
 			this.btn_Procura = new System.Windows.Forms.Button();
 			this.btn_Sair = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// btn_Cadastro
 			// 
-			this.btn_Cadastro.Location = new System.Drawing.Point(155, 113);
+			this.btn_Cadastro.Location = new System.Drawing.Point(314, 71);
 			this.btn_Cadastro.Name = "btn_Cadastro";
 			this.btn_Cadastro.Size = new System.Drawing.Size(75, 23);
 			this.btn_Cadastro.TabIndex = 0;
@@ -45,9 +46,9 @@
 			// 
 			// btn_Procura
 			// 
-			this.btn_Procura.Location = new System.Drawing.Point(462, 113);
+			this.btn_Procura.Location = new System.Drawing.Point(463, 113);
 			this.btn_Procura.Name = "btn_Procura";
-			this.btn_Procura.Size = new System.Drawing.Size(75, 23);
+			this.btn_Procura.Size = new System.Drawing.Size(75, 38);
 			this.btn_Procura.TabIndex = 1;
 			this.btn_Procura.Text = "Procura";
 			this.btn_Procura.UseVisualStyleBackColor = true;
@@ -61,11 +62,22 @@
 			this.btn_Sair.Text = "Sair";
 			this.btn_Sair.UseVisualStyleBackColor = true;
 			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(189, 113);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(75, 38);
+			this.button1.TabIndex = 3;
+			this.button1.Text = "Cadastro de Categorias";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// frm_Principal
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(753, 332);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.btn_Sair);
 			this.Controls.Add(this.btn_Procura);
 			this.Controls.Add(this.btn_Cadastro);
@@ -80,6 +92,7 @@
 		private System.Windows.Forms.Button btn_Cadastro;
 		private System.Windows.Forms.Button btn_Procura;
 		private System.Windows.Forms.Button btn_Sair;
+		private System.Windows.Forms.Button button1;
 	}
 }
 
