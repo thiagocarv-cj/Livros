@@ -72,6 +72,7 @@
 			this.btn_Pesquisar.TabIndex = 3;
 			this.btn_Pesquisar.Text = "Pesquisar";
 			this.btn_Pesquisar.UseVisualStyleBackColor = true;
+			this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
 			// 
 			// dgv_Categorias
 			// 
@@ -81,6 +82,7 @@
 			this.dgv_Categorias.RowHeadersVisible = false;
 			this.dgv_Categorias.Size = new System.Drawing.Size(426, 150);
 			this.dgv_Categorias.TabIndex = 4;
+			this.dgv_Categorias.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Categorias_CellDoubleClick);
 			// 
 			// btn_Cadastrar
 			// 

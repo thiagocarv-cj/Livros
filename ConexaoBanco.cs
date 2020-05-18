@@ -135,7 +135,7 @@ namespace Livros
 
 		#endregion
 
-		#region
+		#region Preencher grids
 		public DataTable PreencheGridCategorias()
 		{
 			SqlCommand pegaCategorias = null;
@@ -237,6 +237,78 @@ namespace Livros
 			}
 		}
 
+
+		#endregion
+
+		#region alterações
+
+		public bool AlterarCategorias(int p_idCategoria, string p_nomeCategoria)
+		{
+			SqlCommand alterarcategorias = null;
+			if (this.Abrirconexao())
+			{
+				try
+				{
+					alterarcategorias = new SqlCommand("Update Categoria set nome = @n where id = @i", cnx);
+					alterarcategorias.Parameters.Add(new SqlParameter("@i", p_idCategoria));
+					alterarcategorias.Parameters.Add(new SqlParameter("@n", p_nomeCategoria));
+
+					alterarcategorias.ExecuteNonQuery();
+
+					return true;
+				}
+				catch (Exception ex)
+				{
+					throw new Exception(ex.Message);
+				}
+				finally
+				{
+					this.Fecharconexao();
+				}
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+
+		#endregion
+
+		#region Consultas
+
+		public DataTable GridPesq(string nome)
+		{
+			SqlCommand dgv_Cat = null;
+
+			if (this.Abrirconexao())
+			{
+				string sql = " Select id, nome as [Categoria] from Categoria where nome like @n";
+
+				try
+				{
+					dgv_Cat = new SqlCommand(sql, cnx);
+					dgv_Cat.Parameters.Add("@n", "%" + nome + "%");
+					SqlDataAdapter adp = new SqlDataAdapter(dgv_Cat);
+					DataTable dt = new DataTable();
+					adp.Fill(dt);
+					//dgvEmp.ExecuteNonQuery();
+					return dt;
+				}
+				catch (Exception ex)
+				{
+					throw new Exception(ex.Message);
+				}
+				finally
+				{
+					this.Fecharconexao();
+				}
+			}
+			else
+			{
+				return null;
+			}
+		}
 
 		#endregion
 	}
